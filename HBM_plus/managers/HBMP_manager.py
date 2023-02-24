@@ -11,8 +11,7 @@ class HeartBeatMonitorPlusManager:
         current_timestamp = self._get_current_timestamp()
         return self._calculate_HBMP(current_timestamp)
 
-    @staticmethod
-    def _get_current_timestamp() -> int:
+    def _get_current_timestamp(self) -> int:
         return trunc(timezone.now().timestamp() * 1000)
 
     def _calculate_HBMP(self, timestamp: float) -> float:
