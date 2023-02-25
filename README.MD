@@ -8,7 +8,7 @@
 
 
 Para simular o output do equipamento, será utlizado a seguinte equação:
-Y = -0.06366 + 0.12613 * cos(\pi*x/500) + 0.12258 * cos(\pi*x/250) + 0.01593 * sin(\pi*x/500) + 0.03147 * sin(\pi*x/250)$$
+$$Y = -0.06366 + 0.12613 * cos(\pi * x/500) + 0.12258 * cos(\pi * x/250) + 0.01593 * sin(\pi * x/500) + 0.03147 * sin(\pi * x/250)$$
 Onde x é o tempo em milissegundos.
 
 ---
