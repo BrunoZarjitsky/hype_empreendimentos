@@ -16,11 +16,9 @@ class StressTestManager:
         self._stress_test_read_heart_beat_monitor_endpoint()
 
     def _stress_test_read_heart_beat_monitor_endpoint(self) -> None:
-        logger.info("Start stress test")
         initial_time = time()
         total_iterations = 0
         while (time() - initial_time) < self._time_testing_in_seconds:
-            logger.info("Creating request")
             requests.get(self._url)
             total_iterations += 1
         self._requests = total_iterations
