@@ -1,11 +1,12 @@
 import requests
 from time import time
 from typing import Union
+from hype_empreendimentos.settings import USED_HOST_URL
 
 
 class StressTestManager:
     def __init__(self, time_testing_in_seconds: Union[int, None] = None) -> None:
-        self._url = "http://localhost:8000/HBM_plus/read_heart_beat_monitor/"
+        self._url = f"{USED_HOST_URL}/HBM_plus/read_heart_beat_monitor/"
         self._time_testing_in_seconds = time_testing_in_seconds if time_testing_in_seconds else 1
         self._requests = 0
         self._requests_per_second = 0

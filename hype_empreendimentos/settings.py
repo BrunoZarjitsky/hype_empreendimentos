@@ -10,10 +10,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import environ
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+env = environ.Env()
+env_file = Path(str(BASE_DIR / ".env"))
+if env_file.is_file():
+    env.read_env(env_file)
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,6 +37,12 @@ ALLOWED_HOSTS = [
     'hype-empreendimentos.onrender.com'
 ]
 
+RENDER_ENVIROMENT = 'render'
+
+USED_HOST_URL = 'http://localhost:8000'
+
+if env('ENVIROMENT') == RENDER_ENVIROMENT:
+    USED_HOST_URL = 'https://hype-empreendimentos.onrender.com'
 
 # Application definition
 
