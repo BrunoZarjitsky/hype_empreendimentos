@@ -6,9 +6,15 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+stress_test_not_available_at = [
+    "https://hype-empreendimentos.onrender.com",
+]
+
 
 class StressTestManager:
     def __init__(self, time_testing_in_seconds: Union[int, None] = None) -> None:
+        if USED_HOST_URL in stress_test_not_available_at:
+            raise Exception("Stress Test not available at this platform")
         self._url = f"{USED_HOST_URL}/HBM_plus/read_heart_beat_monitor/"
         self._time_testing_in_seconds = time_testing_in_seconds if time_testing_in_seconds else 1
         self._requests = 0

@@ -58,3 +58,4 @@ Esse endpoint usa um script para fazer requisições ao endpoint /HBM_plus/read_
     "time_in_seconds": "tempo_de_execução"
 }
 ```
+**OBS:** Esse endpoint não funciona no render.com pois como estou utilizando o plano gratuito, só tenho um worker disponivel
