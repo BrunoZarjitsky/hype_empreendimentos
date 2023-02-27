@@ -36,8 +36,13 @@ Iniciando o servidor
 
     ./manage.py runserver
 
-## Lista de endpoints
- - localhost:8000/HBM_plus/read_heart_beat_monitor/ -> Realiza uma leitura no HBM+
+Rodando os testes unitários 
+
+    ./manage.py test
+
+## Lista de endpoints 
+Rodando o projeto localmente o url será **localhost:8000**, mas também fiz o deploy da aplicação no render.com, o url é **https://hype-empreendimentos.onrender.com**, mas atenção, por causa de algumas limitações do render.com, não é possível utilizar o endpoint de teste de estresse lá.
+ - < url >/HBM_plus/read_heart_beat_monitor/ -> Realiza uma leitura no HBM+
  - localhost:8000/stress_test/run_stress_test/ -> Faz um teste de estresse no endpoint
 
 ## Detalhamento dos endpoints
